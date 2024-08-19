@@ -45,8 +45,10 @@ function changeTheme(checkboxElem) {
     if (checkboxElem.checked) {
         // If checkbox is checked, set theme to dark
         document.body.classList.add('dark-theme');
+        document.querySelector(".button").setAttribute('id', 'button-position-right')
         document.body.classList.remove('light-theme');
-        themeBtn.textContent = "Light Theme";
+
+        // themeBtn.textContent = "Light Theme";
         logo.src = 'assets/logo-light.png';
         link.setAttribute('href', 'assets/logo-light.png')
 
@@ -60,8 +62,9 @@ function changeTheme(checkboxElem) {
         // If checkbox is unchecked, set theme to light
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
+        document.querySelector(".button").setAttribute('id', 'button-position-left')
         navbar.classList.remove('dark-theme')
-        themeBtn.textContent = "Dark Theme";
+        // themeBtn.textContent = "Dark Theme";
         logo.src = 'assets/logo-dark.png';
         link.setAttribute('href', 'assets/logo-dark.png')
 

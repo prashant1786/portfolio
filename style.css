@@ -23,11 +23,13 @@ body {
 .dark-theme {
   background-color: #333;
   color: #f5f5f5;
+  transition: all 0.4s;
 }
 
 .light-theme {
   background-color: #fff;
   color: #000;
+  transition: all 0.4s;
 }
 
 header {
@@ -289,7 +291,7 @@ svg {
 @media only screen and (max-width: 600px) {
   body {
     margin: 0;
-    padding: 10px;
+    padding: 0 10px;
   }
   .pages {
     display: flex;
@@ -298,17 +300,35 @@ svg {
     justify-content: center;
     align-items: center;
   }
-  header {
+  #main {
     position: relative;
+  }
+  header {
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    transition: none;
+    top: 0px;
+    /* transition: all ease-in-out 0.2s; */
+    /* flex-direction: column; */
+    /* transition: none; */
     /* display: none; */
   }
-  .top-nav {
+  nav {
+    /* display: inline-block; */
+
+    height: 100%;
     display: flex;
+  }
+
+  .top-nav {
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
+  }
+  .top-nav > a:link {
+    display: none;
+  }
+  .top-nav > label {
+    position: absolute;
+    right: 40px;
   }
   #d-viewer {
     position: relative;
@@ -329,4 +349,31 @@ svg {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+#change {
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  padding: 2px;
+  position: relative;
+}
+.button {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#button-position-left {
+  background-color: #000;
+  top: 1px;
+  left: 2px;
+  transition: ease-in-out 0.4s;
+}
+
+#button-position-right {
+  top: 1px;
+  left: 20px;
+  background-color: #fff;
+  transition: ease-in-out 0.4s;
 }
