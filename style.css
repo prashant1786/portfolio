@@ -6,7 +6,7 @@ html {
   height: 100%;
 }
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   color: rgb(0, 0, 0);
   font-family: system-ui;
   text-decoration: none;
@@ -43,7 +43,7 @@ header {
   justify-content: space-evenly;
   gap: 20%;
   text-align: center;
-  transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.4s;
 }
 header.hide {
   /* transform: translateY(-100%) */
@@ -288,7 +288,7 @@ svg {
   height: 5vh;
   font-size: 20px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   body {
     margin: 0;
     padding: 0 10px;
@@ -300,39 +300,44 @@ svg {
     justify-content: center;
     align-items: center;
   }
-  #main {
+  #home {
     position: relative;
   }
   header {
     position: fixed;
     display: flex;
     top: 0px;
+    /* position: relative; */
     /* transition: all ease-in-out 0.2s; */
-    /* flex-direction: column; */
+    flex-direction: column;
     /* transition: none; */
     /* display: none; */
   }
-  nav {
-    /* display: inline-block; */
 
+  nav {
     height: 100%;
     display: flex;
   }
 
   .top-nav {
     align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     /* flex-direction: column; */
   }
-  .top-nav > a:link {
+  /* .top-nav > a:link {
     display: none;
-  }
+  } */
   .top-nav > label {
-    position: absolute;
-    right: 40px;
+    /* position: absolute; */
+    /* right: 40px; */
   }
+
   #d-viewer {
     position: relative;
     width: 100%;
+    margin-top: 100px;
     height: 300px;
   }
   #content {
