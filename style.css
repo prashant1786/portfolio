@@ -310,6 +310,7 @@ svg {
     /* position: relative; */
     /* transition: all ease-in-out 0.2s; */
     flex-direction: column;
+
     /* transition: none; */
     /* display: none; */
   }
@@ -322,6 +323,7 @@ svg {
   .top-nav {
     align-items: center;
     display: flex;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     /* flex-direction: column; */
@@ -332,6 +334,10 @@ svg {
   .top-nav > label {
     /* position: absolute; */
     /* right: 40px; */
+  }
+  #dark-light {
+    opacity: 0;
+    display: none;
   }
 
   #d-viewer {
